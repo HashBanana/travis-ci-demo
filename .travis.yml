@@ -4,6 +4,9 @@ services:
 env:
   global: 
     - DOCKER_IMAGE=travis-ci-demo
+cache:
+  directories:
+    - $HOME/.m2
 script:
   - mvn test -B
   - docker build -t $DOCKER_IMAGE .
