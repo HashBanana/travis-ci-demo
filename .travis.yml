@@ -10,5 +10,5 @@ script:
 deploy: 
   provider: script
   script: bash .travis/docker-push.sh
-#  on:
-#    tags: true
+  on:
+    tags: true
