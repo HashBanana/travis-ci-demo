@@ -1,1 +1,6 @@
 language: java
+services: 
+  - docker
+script: 
+  - mvn test -B
+  - docker build -t travis-ci-demo .
